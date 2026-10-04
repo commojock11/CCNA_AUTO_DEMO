@@ -221,7 +221,18 @@
 #     except TypeError as e:
 #         print(f"Type error in car dictionary: {e}")
 
-from Funcs.my_module import cubed_number, greet_person
+# from Funcs.my_module import cubed_number, greet_person
 
-print(cubed_number(3))
-print(greet_person("Alice"))
+# print(cubed_number(3))
+# print(greet_person("Alice"))
+
+from classes.my_classes import Car
+
+# my_car = Car(make = "Jeep", model = "Wrangler", year = 2026, mileage = 5223, condition = "New", color = "White")
+# future_wife_car = Car(make = "Mercedez-Benx", model = "G-Wagon", year = 2027, mileage = 0, condition = "New", color = "Black")
+# print(my_car.__dict__)
+
+my_car = Car(make="Jeep", model="Wrangler", year=2026, mileage=5223, condition="New", color="White")
+my_car.start()
+my_car.accelerate(30)
+my_car.stop()
