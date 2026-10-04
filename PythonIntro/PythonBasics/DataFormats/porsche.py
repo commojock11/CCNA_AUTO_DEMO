@@ -1,0 +1,90 @@
+import json
+
+
+
+the_dict = {
+    "Car": {
+        "make": "Porsche",
+        "model": "911",
+        "year": 2026,
+        "trim": "Carrera S",
+        "body_style": "Coupe",
+        "color": "Arctic Silver",
+        "drive": "Rear-wheel drive",
+        "engine": {
+            "type": "Twin-turbocharged flat-six",
+            "displacement": "3.0L",
+            "horsepower": 443,
+            "torque": 390
+        },
+        "transmission": "8-speed PDK",
+        "top_speed_mph": 191,
+        "zero_to_sixty_mph": 3.3,
+        "fuel_type": "Premium gasoline",
+        "interior": {
+            "material": "Leather",
+            "seating": 4,
+            "color": "Black",
+            "features": [
+            "Heated front seats",
+            "Porsche Communication Management",
+            "Ambient lighting",
+            "Bose premium audio"
+            ]
+        },
+        "exterior": {
+            "wheels": "20-inch front / 21-inch rear",
+            "brakes": "Ventilated ceramic",
+            "headlights": "LED Matrix",
+            "roof": "Fixed coupe roof"
+        },
+        "technology": {
+            "driver_assist": [
+            "Adaptive cruise control",
+            "Lane keeping assist",
+            "ParkAssist",
+            "Night vision assist"
+            ],
+            "infotainment": "12.6-inch curved display",
+            "connectivity": [
+            "Apple CarPlay",
+            "Android Auto",
+            "Bluetooth"
+            ]
+        },
+        "performance_specs": {
+            "powertrain": "Rear-engine layout",
+            "weight_lb": 3307,
+            "estimated_mpg_city": 20,
+            "estimated_mpg_highway": 27,
+            "range_miles": 380
+        },
+        "ownership": {
+            "market_segment": "Sports car",
+            "availability": "2026 model year",
+            "notes": "Randomized fictional attributes for a Porsche 911 2026 concept profile."
+        }
+    }
+}
+
+
+# load is used to load JSON data from a file into a Python dictionary
+# with open("porsche.json") as file:
+#     data = json.load(file)
+
+# print(data)
+
+
+#loads is used to load JSON data into a Python dictionary
+# the_dict = json.loads(the_dict)
+# print(type(the_dict))
+
+#dumps is used to load python data (dictionary) into a JSON string)
+# json_string = json.dumps(the_dict, indent = 2)
+# print(json_string)
+
+#dump is used to save python data into a JSON file
+# with open("porsche.json", "w") as file:
+#     json.dump(the_dict, file, indent=2)
+
+

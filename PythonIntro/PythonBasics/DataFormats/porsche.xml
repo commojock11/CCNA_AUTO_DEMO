@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Car>
+    <vehicle>
+    <make>Porsche</make>
+    <model>911</model>
+    <year>2026</year>
+    <trim>Carrera S</trim>
+    <body_style>Coupe</body_style>
+    <color>Arctic Silver</color>
+    <drive>Rear-wheel drive</drive>
+
+    <engine>
+        <type>Twin-turbocharged flat-six</type>
+        <displacement>3.0L</displacement>
+        <horsepower>443</horsepower>
+        <torque>390</torque>
+    </engine>
+
+    <transmission>8-speed PDK</transmission>
+    <top_speed_mph>191</top_speed_mph>
+    <zero_to_sixty_mph>3.3</zero_to_sixty_mph>
+    <fuel_type>Premium gasoline</fuel_type>
+
+    <interior>
+        <material>Leather</material>
+        <seating>4</seating>
+        <color>Black</color>
+        <features>
+        <feature>Heated front seats</feature>
+        <feature>Porsche Communication Management</feature>
+        <feature>Ambient lighting</feature>
+        <feature>Bose premium audio</feature>
+        </features>
+    </interior>
+
+    <exterior>
+        <wheels>20-inch front / 21-inch rear</wheels>
+        <brakes>Ventilated ceramic</brakes>
+        <headlights>LED Matrix</headlights>
+        <roof>Fixed coupe roof</roof>
+    </exterior>
+
+    <technology>
+        <driver_assist>
+        <assist>Adaptive cruise control</assist>
+        <assist>Lane keeping assist</assist>
+        <assist>ParkAssist</assist>
+        <assist>Night vision assist</assist>
+        </driver_assist>
+        <infotainment>12.6-inch curved display</infotainment>
+        <connectivity>
+        <connection>Apple CarPlay</connection>
+        <connection>Android Auto</connection>
+        <connection>Bluetooth</connection>
+        </connectivity>
+    </technology>
+
+    <performance_specs>
+        <powertrain>Rear-engine layout</powertrain>
+        <weight_lb>3307</weight_lb>
+        <estimated_mpg_city>20</estimated_mpg_city>
+        <estimated_mpg_highway>27</estimated_mpg_highway>
+        <range_miles>380</range_miles>
+    </performance_specs>
+
+    <ownership>
+        <market_segment>Sports car</market_segment>
+        <availability>2026 model year</availability>
+        <notes>Randomized fictional attributes for a Porsche 911 2026 concept profile.</notes>
+    </ownership>
+    </vehicle>
+</Car>
