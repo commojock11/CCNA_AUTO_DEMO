@@ -1,0 +1,6 @@
+$kind: http-request
+url: https://swapi.dev/api/starships/3?Content-Type=application/json
+method: GET
+queryParams:
+  Content-Type: application/json
+order: 3662160360246940

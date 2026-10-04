@@ -1,0 +1,7 @@
+$kind: http-request
+description: ""
+url: https://swapi.dev/api/people/1
+method: GET
+headers:
+  Content-Type: application/json
+order: 1791153168265

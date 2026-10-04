@@ -1,0 +1,9 @@
+$kind: http-request
+url: https://swapi.dev/api/planets/1?ContentType=application/json
+method: GET
+queryParams:
+  - key: ContentType
+    value: application/json
+    disabled: false
+    description: ""
+order: 2709032581969065
