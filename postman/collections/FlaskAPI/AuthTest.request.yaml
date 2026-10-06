@@ -1,0 +1,13 @@
+$kind: http-request
+url: http://127.0.0.1:5000/person
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "name": "Clay",
+        "age": "25"
+    }
+auth:
+  type: noauth
+order: 4237690482003326
