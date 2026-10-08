@@ -1,0 +1,19 @@
+$kind: http-request
+url: https://devnetsandboxiosxec8k.cisco.com/restconf/data/netconf-state/capabilities
+method: GET
+headers:
+  Accept: application/yang-data+json
+  Content-Type: application/yang-data+json
+auth:
+  type: basic
+  credentials:
+    username: clay.richards2222
+    password: "{{TempSandboxPasswd}}"
+settings:
+  disabledSystemHeaders:
+    - accept
+    - host
+    - user-agent
+    - accept-encoding
+    - connection
+order: 1791484886336

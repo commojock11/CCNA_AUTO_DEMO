@@ -1,0 +1,4 @@
+name: MyCiscoEnv
+values:
+  - key: TempSandboxPasswd
+    value: ''

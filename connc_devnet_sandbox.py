@@ -4,23 +4,16 @@ import sys
 from ncclient import manager
 import xmltodict
 
-# NETCONF filter for interface information
+# NETCONF filter for live operational interface information (includes DHCP IPs)
 INTERFACE_FILTER = """
-<filter xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
-    <interfaces xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces">
-        <interface>
-            <name/>
-            <description/>
-            <enabled/>
-            <ipv4 xmlns="urn:ietf:params:xml:ns:yang:ietf-ip">
-                <address>
-                    <ip/>
-                    <netmask/>
-                </address>
-            </ipv4>
-        </interface>
-    </interfaces>
-</filter>
+<interfaces xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-interfaces-oper">
+    <interface>
+        <name/>
+        <ipv4/>
+        <admin-status/>
+        <oper-status/>
+    </interface>
+</interfaces>
 """
 
 
@@ -46,8 +39,8 @@ def connect_to_device(
 def get_interfaces(connection: manager.Manager) -> Dict[str, Any]:
   """Retrieves interface information using NETCONF."""
   try:
-    response = connection.get(INTERFACE_FILTER)
-    print(response.xml)
+    response = connection.get(filter=('subtree', INTERFACE_FILTER))
+    # print(response.xml)
     return xmltodict.parse(response.xml)
   except Exception as e:
     print(f"Failed to retrieve interface information: {str(e)}")
@@ -67,32 +60,24 @@ def display_interfaces(interfaces_data: Dict[str, Any]) -> None:
 
     for interface in interfaces:
       name = interface.get('name', 'N/A')
-      status = 'up' if interface.get('enabled') == 'true' else 'down'
+      status = 'up' if 'up' in interface.get('admin-status', '') else 'down'
 
-      ip_address = 'not assigned'
-      if (
-          'ipv4' in interface
-          and interface['ipv4']
-          and 'address' in interface['ipv4']
-      ):
-        addresses = interface['ipv4']['address']
-        if isinstance(addresses, list):
-          ip_address = addresses[0].get('ip', 'not assigned')
-        else:
-          ip_address = addresses.get('ip', 'not assigned')
+      ip_address = interface.get('ipv4', 'not assigned')
+      if ip_address == '0.0.0.0' or not ip_address:
+        ip_address = 'not assigned'
 
-      print(f'{name:<20}{ip_address:<20}{status}')
+      print(f'{name:<24}{ip_address:<20}{status}')
 
   except KeyError as e:
     print(f'Error parsing interface data: {str(e)}')
 
 
 def main():
-  # Device connection parameters
+  # Cisco DevNet Catalyst 8000V Sandbox connection parameters
   device = {
-      'host': '172.16.132.129',  # CSR 1000v IP (change to 172.16.132.130 for router 2)
-      'username': 'cisco',
-      'password': 'cisco',
+      'host': 'devnetsandboxiosxec8k.cisco.com',
+      'username': 'clay.richards2222',
+      'password': 'd3FcKk0_PP4Rs_s5',
       'port': 830,
   }
 
@@ -107,4 +92,3 @@ def main():
 
 if __name__ == '__main__':
   main()
-
