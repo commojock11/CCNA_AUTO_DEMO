@@ -1,0 +1,4 @@
+$kind: http-request
+url: https://{{vmanage}}:{{port}}/dataservice/device/monitor
+method: GET
+order: 2000

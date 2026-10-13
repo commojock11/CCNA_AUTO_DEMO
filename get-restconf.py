@@ -5,9 +5,9 @@ import json
 requests.packages.urllib3.disable_warnings()
 
 # Device details and credentials
-DEVICE_IP = "devnetsandboxiosxec8k.cisco.com"
+DEVICE_IP = "127.0.0.1:8443"
 USERNAME = "clay.richards2222" # Update if using a different local lab account
-PASSWORD = "B92_eXmw-97S5zK"
+PASSWORD = "ODo842xO1N-dT_kM"
 
 # RESTCONF endpoint for IETF standard interfaces
 url = f"https://{DEVICE_IP}/restconf/data/Cisco-IOS-XE-interfaces-oper:interfaces"

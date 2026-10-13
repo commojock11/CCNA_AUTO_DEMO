@@ -1,5 +1,5 @@
 $kind: http-request
-url: https://devnetsandboxiosxec8k.cisco.com/restconf/data/netconf-state/capabilities
+url: https://10.10.20.148:8443/restconf/data/ietf-netconf-monitoring:netconf-state/capabilities
 method: GET
 headers:
   Accept: application/yang-data+json
@@ -8,7 +8,7 @@ auth:
   type: basic
   credentials:
     username: clay.richards2222
-    password: "{{TempSandboxPasswd}}"
+    password: 9aUH-TZof_4F65S
 settings:
   disabledSystemHeaders:
     - accept

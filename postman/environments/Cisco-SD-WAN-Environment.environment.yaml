@@ -1,0 +1,10 @@
+name: Cisco-SD-WAN-Environment
+values:
+  - key: vmanage
+    value: sandboxsdwan.cisco.com
+  - key: j_username
+    value: devnetuser
+  - key: j_password
+    value: Cisco123!
+  - key: port
+    value: '8443'

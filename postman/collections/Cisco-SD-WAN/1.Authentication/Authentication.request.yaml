@@ -1,0 +1,11 @@
+$kind: http-request
+url: https://{{vmanage}}/j_security_check
+method: POST
+headers:
+  Content-Type: application/x-www-form-urlencoded
+body:
+  type: urlencoded
+  content:
+    j_username: "{{j_username}}"
+    j_password: "{{j_password}}"
+order: 1000

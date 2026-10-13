@@ -1,0 +1,4 @@
+$kind: http-request
+url: https://{{vmanage}}:{{port}}/dataservice/template/policy/vedge/devices
+method: GET
+order: 1000

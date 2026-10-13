@@ -1,0 +1,4 @@
+$kind: http-request
+url: https://{{vmanage}}:{{port}}/dataservice/statistics/interface
+method: GET
+order: 4000

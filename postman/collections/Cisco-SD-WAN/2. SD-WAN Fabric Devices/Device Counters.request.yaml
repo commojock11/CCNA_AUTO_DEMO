@@ -1,0 +1,4 @@
+$kind: http-request
+url: https://{{vmanage}}:{{port}}/dataservice/device/counters
+method: GET
+order: 3000

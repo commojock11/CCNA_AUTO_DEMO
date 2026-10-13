@@ -1,0 +1,4 @@
+$kind: http-request
+url: https://{{vmanage}}:{{port}}/dataservice/template/feature
+method: GET
+order: 1000
